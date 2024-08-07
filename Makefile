@@ -1,0 +1,2 @@
+make link:
+	npx eslint .
