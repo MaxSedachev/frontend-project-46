@@ -9,10 +9,10 @@ const __dirname = dirname(__filename);
 
 const getFixturePath = (filename) => path.resolve(__dirname, filename);
 
-test ('should correctly find differences between two files', () => {
-    const filepath1 = getFixturePath ("../__fixtures__/file1.json");
-    const filepath2 = getFixturePath ("../__fixtures__/file2.json");
-    const expected = `{
+test('should correctly find differences between two files', () => {
+  const filepath1 = getFixturePath('../__fixtures__/file1.json');
+  const filepath2 = getFixturePath('../__fixtures__/file2.json');
+  const expected = `{
 - follow: false
   host: hexlet.io
 - proxy: 123.234.53.22
@@ -20,6 +20,6 @@ test ('should correctly find differences between two files', () => {
 + timeout: 20
 + verbose: true
 }`;
-    const result = getDiff(filepath1, filepath2);
-    expect(result).toEqual(expected);
+  const result = getDiff(filepath1, filepath2);
+  expect(result).toEqual(expected);
 });
