@@ -2,7 +2,7 @@
 [![Actions Status](https://github.com/MaxSedachev/frontend-project-46/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/MaxSedachev/frontend-project-46/actions)
 
 ### Github Actions status:
-![Github Actions workflow](https://github.com/github/docs/actions/workflows/newActions.yml/badge.svg)
+![example workflow](https://github.com/github/docs/actions/workflows/newActions.yml/badge.svg)
 
 ### Code Climate status:
 [![Maintainability](https://api.codeclimate.com/v1/badges/0c09cf1720514c4f5e15/maintainability)](https://codeclimate.com/github/MaxSedachev/frontend-project-46/maintainability)
