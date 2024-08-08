@@ -1,6 +1,6 @@
 make install:
 	npm ci
-make link:
+make lint:
 	npx eslint .
 make test:
 	npm test
