@@ -9,3 +9,5 @@
 [![Test Coverage](https://api.codeclimate.com/v1/badges/0c09cf1720514c4f5e15/test_coverage)](https://codeclimate.com/github/MaxSedachev/frontend-project-46/test_coverage)
 
 [Поиск различий между двумя json-файлами](https://asciinema.org/a/oxVYv2SObCTfAWrh7N1TAhnbw)
+
+[Поиск различий между двумя yaml-файлами](https://asciinema.org/a/WyVC8HQaz4QlJL76wPdTYOVGo)
