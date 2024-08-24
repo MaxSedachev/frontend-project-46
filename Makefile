@@ -7,4 +7,4 @@ make test:
 make test-coverage:
 	npm test -- --coverage --coverageProvider=v8
 make gendiff:
-	node bin/gendiff __fixtures__/file1.json __fixtures__/file2.json
+	node bin/gendiff __fixtures__/obj1.json __fixtures__/obj2.json

@@ -11,3 +11,5 @@
 [Поиск различий между двумя json-файлами](https://asciinema.org/a/oxVYv2SObCTfAWrh7N1TAhnbw)
 
 [Поиск различий между двумя yaml-файлами](https://asciinema.org/a/WyVC8HQaz4QlJL76wPdTYOVGo)
+
+[Поиск различий между двумя файлами, имеющие вложенные структуры](https://asciinema.org/a/WipNUQg13BpMvjfslTdknyMeL)
