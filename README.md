@@ -15,3 +15,5 @@
 [Поиск различий между двумя файлами, имеющие вложенные структуры](https://asciinema.org/a/WipNUQg13BpMvjfslTdknyMeL)
 
 [Поиск различий между двумя файлами, плоский формат](https://asciinema.org/a/KKQaXVFOt1WMdfx7MOBIMGxdI)
+
+[Поиск различий между двумя файлами, json формат](https://asciinema.org/a/qdliuuuuWukQxqtsj5NR7mmRe)

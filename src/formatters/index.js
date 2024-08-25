@@ -7,6 +7,8 @@ const formatStyle = (result, format) => {
       return stylish(result);
     case 'plain':
       return plain(result);
+    case 'json':
+      return JSON.stringify(result);
     default:
       throw new Error(`Формат не поддерживается: ${format}`);
   }

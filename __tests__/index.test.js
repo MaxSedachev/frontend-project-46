@@ -95,8 +95,16 @@ test('find the differences between two files that have nested structures', () =>
 test('find the differences between the two files, flat format', () => {
   const filepath1 = getFixturePath('../__fixtures__/file1.json');
   const filepath2 = getFixturePath('../__fixtures__/file2.json');
-  const expectPlain = getFile('plain.txt')
+  const expectPlain = getFile('plain.txt');
 
   const result = getDiff(filepath1, filepath2, 'plain');
   expect(result).toEqual(expectPlain);
+});
+
+test('find the differences between the two files, json format', () => {
+  const filepath1 = getFixturePath('../__fixtures__/file1.json');
+  const filepath2 = getFixturePath('../__fixtures__/file2.json');
+  const expectJson = getFile('json.txt');
+  const result = getDiff(filepath1, filepath2, 'json');
+  expect(result).toEqual(expectJson);
 });
