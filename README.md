@@ -13,3 +13,5 @@
 [Поиск различий между двумя yaml-файлами](https://asciinema.org/a/WyVC8HQaz4QlJL76wPdTYOVGo)
 
 [Поиск различий между двумя файлами, имеющие вложенные структуры](https://asciinema.org/a/WipNUQg13BpMvjfslTdknyMeL)
+
+[Поиск различий между двумя файлами, плоский формат](https://asciinema.org/a/KKQaXVFOt1WMdfx7MOBIMGxdI)
