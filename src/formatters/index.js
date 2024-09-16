@@ -1,7 +1,7 @@
 import stylish from './stylish.js';
 import plain from './plain.js';
 
-const formatStyle = (result, format) => {
+const formatDiff = (result, format) => {
   switch (format) {
     case 'stylish':
       return stylish(result);
@@ -13,4 +13,4 @@ const formatStyle = (result, format) => {
       throw new Error(`Формат не поддерживается: ${format}`);
   }
 };
-export default formatStyle;
+export default formatDiff;
