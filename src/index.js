@@ -4,8 +4,8 @@ import findDifferences from './differences.js';
 import parse from './parsers.js';
 import formatDiff from './formatters/index.js';
 
-const getFile = (filePath) => fs.readFileSync(filePath, 'utf8');
-const getFormat = (filePath) => path.extname(filePath);
+export const getFile = (filePath) => fs.readFileSync(filePath, 'utf8');
+export const getFormat = (filePath) => path.extname(filePath);
 const getPath = (filePath) => path.resolve(process.cwd(), filePath);
 
 const getDiff = (filepath1, filepath2, format = 'stylish') => {
@@ -17,4 +17,4 @@ const getDiff = (filepath1, filepath2, format = 'stylish') => {
   return formatDiff(result, format);
 };
 
-export { getDiff, getFile, getFormat};
+export default getDiff;

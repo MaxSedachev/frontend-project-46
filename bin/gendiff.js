@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 import { Command } from 'commander';
-import { getDiff } from '../src/index.js';
+import getDiff from '../src/index.js';
 
 const program = new Command();
 
@@ -12,5 +12,6 @@ program
   .option('-f, --format [type]', 'output format', 'stylish')
   .argument('<filepath1>')
   .argument('<filepath2>')
-  .action((filepath1, filepath2, option) => console.log(getDiff(filepath1, filepath2, option.format)));
+  .action((filepath1, filepath2, option) => 
+    console.log(getDiff(filepath1, filepath2, option.format)));
 program.parse();
