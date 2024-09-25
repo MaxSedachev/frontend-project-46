@@ -1,6 +1,6 @@
 import _ from 'lodash';
 
-const stylish = (file, replacer = ' ', spaceCount = 2) => {
+const stylish = (file, replacer = ' ', spaceCount = 4) => {
   const iter = (obj, depth) => {
     if (!_.isObject(obj)) return `${obj}`;
     const lines = obj.map((item) => {
