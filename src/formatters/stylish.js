@@ -7,7 +7,7 @@ const stylish = (file, replacer = ' ', spaceCount = 4) => {
       const iter1 = (obj1, depth1) => {
         if (!_.isObject(obj1)) return `${obj1}`;
         const test = Object.entries(obj1).map(([key, value]) => {
-          const preparedValue = iter1(value, depth1 + 1);
+          const preparedValue = iter1(value, depth1);
           const indent = replacer.repeat(depth1 * spaceCount);
           return `${indent}${key}: ${preparedValue}`;
         });
