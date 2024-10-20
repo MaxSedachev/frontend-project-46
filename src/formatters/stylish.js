@@ -13,11 +13,13 @@ const stylish = (file, replacer = ' ', spaceCount = 2) => {
         });
         const outIndent = replacer.repeat((depth1 * spaceCount) - spaceCount);
         const result = ['{', ...test, `${outIndent}}`].join('\n');
+        
         return result;
       };
       const preparedValue = iter1(item.value, depth + 1);
       const forNested = iter(item.children, depth + 1);
       const indent = replacer.repeat(depth * spaceCount);
+
       if (item.type === 'unchanged') {
         return `${indent}  ${item.key}: ${preparedValue}`;
       } if (item.type === 'deleted') {
@@ -33,8 +35,9 @@ const stylish = (file, replacer = ' ', spaceCount = 2) => {
     });
     const outIndent = replacer.repeat((depth * spaceCount) - spaceCount);
     const result = ['{', ...lines, `${outIndent}}`].join('\n');
-    return result.trim();
+    return result;
   };
   return iter(file, 1);
 };
+
 export default stylish;
