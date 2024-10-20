@@ -33,7 +33,7 @@ const stylish = (file, replacer = ' ', spaceCount = 4) => {
     });
     const outIndent = replacer.repeat((depth * spaceCount) - spaceCount);
     const result = ['{', ...lines, `${outIndent}}`].join('\n');
-    return result.trim();
+    return result;
   };
   return iter(file, 1);
 };
