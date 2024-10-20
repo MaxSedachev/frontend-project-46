@@ -12,8 +12,7 @@ const stylish = (file, replacer = ' ', spaceCount = 2) => {
           return `${indent}${key}: ${preparedValue}`;
         });
         const outIndent = replacer.repeat((depth1 * spaceCount) - spaceCount);
-        const result = ['{', ...test, `${outIndent}}`].join('\n');
-        
+        const result = ['{', ...test, `${outIndent}}`].join('\n');      
         return result;
       };
       const preparedValue = iter1(item.value, depth + 1);
