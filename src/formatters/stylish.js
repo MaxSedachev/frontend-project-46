@@ -1,6 +1,6 @@
 import _ from 'lodash';
 
-const stylish = (file, replacer = ' ', spaceCount = 4) => {
+const stylish = (file, replacer = ' ', spaceCount = 2) => {
   const iter = (obj, depth) => {
     if (!_.isObject(obj)) return `${obj}`;
     const lines = obj.map((item) => {
@@ -25,7 +25,7 @@ const stylish = (file, replacer = ' ', spaceCount = 4) => {
       } if (item.type === 'added') {
         return `${indent}+ ${item.key}: ${preparedValue}`;
       } if (item.type === 'changed') {
-        return `${indent}- ${item.key}: ${iter1(item.value1, depth + 2)}\n${indent}+ ${item.key}: ${iter1(item.value2, depth + 2)}`;
+        return `${indent}- ${item.key}: ${iter1(item.value1, depth + 1)}\n${indent}+ ${item.key}: ${iter1(item.value2, depth + 1)}`;
       } if (item.type === 'nested') {
         return `${indent}${item.key}: ${forNested}`;
       }
@@ -33,7 +33,7 @@ const stylish = (file, replacer = ' ', spaceCount = 4) => {
     });
     const outIndent = replacer.repeat((depth * spaceCount) - spaceCount);
     const result = ['{', ...lines, `${outIndent}}`].join('\n');
-    return result;
+    return result.trim();
   };
   return iter(file, 1);
 };
