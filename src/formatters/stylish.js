@@ -25,7 +25,7 @@ const stylish = (file, replacer = ' ', spaceCount = 4) => {
       } if (item.type === 'added') {
         return `${indent}+ ${item.key}: ${preparedValue}`;
       } if (item.type === 'changed') {
-        return `${indent}- ${item.key}: ${iter1(item.value1, depth + 1)}\n${indent}+ ${item.key}: ${iter1(item.value2, depth + 1)}`;
+        return `${indent}- ${item.key}: ${iter1(item.value1, depth + 2)}\n${indent}+ ${item.key}: ${iter1(item.value2, depth + 2)}`;
       } if (item.type === 'nested') {
         return `${indent}${item.key}: ${forNested}`;
       }
