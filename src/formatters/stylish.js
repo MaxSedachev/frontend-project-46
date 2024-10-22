@@ -12,12 +12,12 @@ const stylish = (file, replacer = ' ', spaceCount = 2) => {
           return `${indent}${key}: ${preparedValue}`;
         });
         const outIndent = replacer.repeat((depth1 * spaceCount) - spaceCount);
-        const result = ['{', ...test, `${outIndent}}`].join('\n');  
+        const result = ['{', ...test, `${outIndent}}`].join('\n');
         return result;
       };
       const preparedValue = iter1(item.value, depth + 1);
       const forNested = iter(item.children, depth + 1);
-      const indent = replacer.repeat(depth * spaceCount);
+      const indent = replacer.repeat(depth * spaceCount).slice(0, -2);
 
       if (item.type === 'unchanged') {
         return `${indent}  ${item.key}: ${preparedValue}`;
