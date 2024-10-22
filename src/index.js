@@ -1,12 +1,7 @@
-import fs from 'fs';
-import path from 'node:path';
 import findDifferences from './differences.js';
 import parse from './parsers.js';
 import formatDiff from './formatters/index.js';
-
-export const getFile = (filePath) => fs.readFileSync(filePath, 'utf8');
-export const getFormat = (filePath) => path.extname(filePath);
-const getPath = (filePath) => path.resolve(process.cwd(), filePath);
+import { getPath } from './utils.js';
 
 const getDiff = (filepath1, filepath2, format = 'stylish') => {
   const path1 = getPath(filepath1);

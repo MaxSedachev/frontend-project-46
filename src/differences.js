@@ -2,7 +2,7 @@ import _ from 'lodash';
 
 const findDifferences = (obj1, obj2) => {
   const keys = _.union(_.keys(obj1), _.keys(obj2));
-  const sortKeys = [...keys].sort();
+  const sortKeys = _.sortBy(keys);
 
   return sortKeys.map((key) => {
     const value1 = obj1[key];
