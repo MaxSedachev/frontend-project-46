@@ -17,8 +17,9 @@ const stylish = (file, replacer = ' ', spaceCount = 2) => {
       };
       const preparedValue = iter1(item.value, depth + 1);
       const forNested = iter(item.children, depth + 1);
-      const indent = replacer.repeat(depth * spaceCount).slice(0, -4);
+      const indent = replacer.repeat((depth * spaceCount) + spaceCount).slice(0, -2);
 
+      console.log('item:', item);
       if (item.type === 'unchanged') {
         return `${indent}  ${item.key}: ${preparedValue}`;
       } if (item.type === 'deleted') {
