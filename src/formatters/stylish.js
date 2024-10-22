@@ -8,10 +8,10 @@ const stylish = (file, replacer = ' ', spaceCount = 2) => {
         if (!_.isObject(obj1)) return `${obj1}`;
         const test = Object.entries(obj1).map(([key, value]) => {
           const preparedValue = iter1(value, depth1 + 2);
-          const indent = replacer.repeat(depth1 * spaceCount);
+          const indent = replacer.repeat((depth1 * spaceCount) - spaceCount);
           return `${indent}${key}: ${preparedValue}`;
         });
-        const outIndent = replacer.repeat((depth1 * spaceCount) - spaceCount);
+        const outIndent = replacer.repeat((depth1 * spaceCount) + spaceCount);
         const result = ['{', ...test, `${outIndent}}`].join('\n');
         return result;
       };
