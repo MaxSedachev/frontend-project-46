@@ -1,7 +1,9 @@
+import path from 'node:path';
 import findDifferences from './differences.js';
 import parse from './parsers.js';
 import formatDiff from './formatters/index.js';
-import { getPath } from './utils.js';
+
+const getPath = (filePath) => path.resolve(process.cwd(), filePath);
 
 const getDiff = (filepath1, filepath2, format = 'stylish') => {
   const path1 = getPath(filepath1);

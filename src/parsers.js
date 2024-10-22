@@ -1,5 +1,9 @@
 import yaml from 'js-yaml';
-import { getFile, getFormat } from './index.js';
+import fs from 'fs';
+import path from 'node:path';
+
+const getFile = (filePath) => fs.readFileSync(filePath, 'utf8');
+const getFormat = (filePath) => path.extname(filePath);
 
 const parse = (filePath) => {
   const format = getFormat(filePath);
