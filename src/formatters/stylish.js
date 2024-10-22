@@ -15,7 +15,7 @@ const stylish = (file, replacer = ' ', spaceCount = 2) => {
         const result = ['{', ...test, `${outIndent}}`].join('\n');
         return result;
       };
-      const preparedValue = iter1(item.value, depth + 1);
+      const preparedValue = iter1(item.value, depth + 2);
       const forNested = iter(item.children, depth + 2);
       const indent = replacer.repeat(depth * spaceCount);
 
