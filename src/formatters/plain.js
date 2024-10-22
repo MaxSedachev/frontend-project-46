@@ -4,6 +4,8 @@ const plain = (tree, acc = 0) => {
   const iter = (val) => {
     if (_.isObject(val)) {
       return '[complex value]';
+    }if (_.isNumber(val)) {
+      return val;
     } if (val === null) {
       return null;
     } if (val === true) {
